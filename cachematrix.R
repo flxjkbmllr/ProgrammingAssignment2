@@ -43,3 +43,10 @@ cacheSolve <- function(x, ...) {
     i ## Return a matrix that is the inverse of 'x'
 }
 
+## Example call with use of these functions
+B <- matrix(c(2, 4, 3, 1, 5, 7, 4, 3, 5), nrow=3,  ncol=3) 
+BM <- makeCacheMatrix(B)
+cacheSolve(BM)
+
+## Verification with solve() only
+solve(B)
